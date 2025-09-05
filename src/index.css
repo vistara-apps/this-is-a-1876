@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: hsl(220, 10%, 95%);
+  --accent: hsl(30, 100%, 60%);
+  --primary: hsl(220, 60%, 50%);
+  --success: hsl(130, 60%, 45%);
+  --surface: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 70%, 50%);
+  --text-primary: hsl(220, 15%, 25%);
+  --text-secondary: hsl(220, 10%, 45%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220, 10%, 80%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220, 10%, 70%);
+}
+
+/* Touch-friendly button sizing for mobile */
+.btn-touch {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Recording indicator */
+@keyframes recording-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.recording-indicator {
+  animation: recording-pulse 1s ease-in-out infinite;
+}
